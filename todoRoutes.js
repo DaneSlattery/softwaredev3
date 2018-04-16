@@ -3,11 +3,6 @@ let express = require('express');
 let router = express.Router();
 let todoList = []; //our todo list array
 
-//RESTful api
-router.get('/api/list', function (req, res) {
-  res.json(todoList); //Respond with JSON
-});
-
 router.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'views', 'todo', 'index.html'));
 });
@@ -24,13 +19,24 @@ router.post('/edit', function(req, res){
    res.sendFile(path.join(__dirname, 'views', 'todo', 'edit.html'));
 });
 
+//RESTful api
+router.get('/api/list', function (req, res) {
+  res.json(todoList); //Respond with JSON
+});
+
 router.get('/api/get/:id', function (req, res) {
    res.json(todoList[req.params.id]); //Notice the wildcard in the URL?
                 //Try browsing to /api/get/0 once you've added some entries
 });
 
+// router.post('/api/create', function(req, res){
+//   console.log('creating a todo entry');
+// });
+
 router.post('/api/create', function(req, res){
-  console.log("creating a todo entry");
+  console.log('Creating the following todo:', req.body.todo);
+  todoList.push(req.body.todo);
+  res.redirect(req.baseUrl + '/api/list');
 });
 
 router.post('/api/delete', function(req, res){
@@ -39,10 +45,6 @@ router.post('/api/delete', function(req, res){
 
 router.post('/api/edit', function(req, res){
   console.log("editing a todo entry");
-});
-
-router.post('/api/create', function(req, res){ console.log("Creating the following todo:", req.body.todo); todoList.push(req.body.todo);
-res.redirect(req.baseUrl + '/api/list');
 });
 
 module.exports = router;
