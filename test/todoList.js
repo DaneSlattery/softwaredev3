@@ -1,7 +1,7 @@
 "use strict";
 
 const chai = require('chai').assert;
-const script = require('todoList');
+const script = require('../todoList');
 
 describe("TodoList", function ()
 {
@@ -14,7 +14,7 @@ describe("TodoList", function ()
     {
         let testLength = script.listLength() + 1;
         script.add("Hello");
-        chai.equal(testLength, script.testLength());
+        chai.equal(testLength, script.listLength());
     });
 
     it("get gets the right item", function () {

@@ -4,7 +4,7 @@ var list = [];
 //Public
 module.exports =
 {
-    add: function(todo) 
+    add: function(todo)
     {
         list.push(todo)
     },
@@ -12,11 +12,11 @@ module.exports =
     {
         list[index] = todo;
     },
-    get: function(index) 
+    get: function(index)
     {
         return list[index];
     },
-    delete: function(index) 
+    delete: function(index)
     {
         list.splice(index, 1); //remove one element starting from index
     },

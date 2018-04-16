@@ -1,7 +1,7 @@
 let path = require('path');
 let express = require('express');
 let router = express.Router();
-let todoList = require('todoList'); //our todo list array
+let todoList = require('./todoList'); //our todo list array
 
 router.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'views', 'todo', 'index.html'));
