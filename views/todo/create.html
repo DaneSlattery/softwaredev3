@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<html lang="en">
+<head>
+  <title>Todo List: Create</title>
+  <meta charset="utf-8" />
+</head>
 
-  </body>
+<body>
+  <form action="/api/create" method="post">
+    <div>
+      <label for="todo">Enter Your New Todo:</label>
+      <input type="text" id="todo" name="todo">
+    </div>
+    <div class="button">
+      <button type="submit">Add</button>
+    </div>
+  </form>
+</body>
 </html>
