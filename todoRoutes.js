@@ -41,4 +41,8 @@ router.post('/api/edit', function(req, res){
   console.log("editing a todo entry");
 });
 
+router.post('/api/create', function(req, res){ console.log("Creating the following todo:", req.body.todo); todoList.push(req.body.todo);
+res.redirect(req.baseUrl + '/api/list');
+});
+
 module.exports = router;
