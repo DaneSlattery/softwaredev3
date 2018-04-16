@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en"> <head>
+<html lang="en">
+<head>
 <title>Todo List</title>
-<meta charset="utf-8" /> </head>
+<meta charset="utf-8" />
+<script src="/cdn/libraries/jquery.js"></script><!-- the jQuery library-->
+<script src="/cdn/scripts/todo/index.js"></script><!-- Our JavaScript code for this page-->
+</head>
+
 <body>
   <h1>Stuff I need to do:</h1>
-  <button type="button" id="helloButton">Press the button!</button> <!-- Our JavaScript code for this page-->
-  <script src="/cdn/scripts/todo/index.js"></script>
+  <ol id="todoList">
+    <!-- The list of stuff I need to do -->
+  </ol>
+  Add a new todo:
+  <input type="text" id="newTodoInput"></input>
+  <button type="button" id="addTodoButton">Add</button>
 </body>
 </html>
