@@ -19,5 +19,13 @@ module.exports =
     delete: function(index) 
     {
         list.splice(index, 1); //remove one element starting from index
+    },
+    listLength: function()
+    {
+        return list.length
+    },
+    test: function()
+    {
+        return true;
     }
 }
