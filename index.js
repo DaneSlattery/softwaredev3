@@ -1,7 +1,7 @@
 let path = require('path');
 let express = require('express');
 let app = express();
-let xml = require('xmlhttprequest')
+// let xml = require('xmlhttprequest')
 
 //loading body-parser
 let bodyParser = require('body-parser');
@@ -18,11 +18,11 @@ app.use('/todo', todoRouter);
 
 app.use('/cdn', express.static('public')); /* this will mount your public directory to '/cdn'. i.e. your scripts folder will be at /cdn/scripts */
 
-let request = new xml.XMLHttpRequest();
+let request = new XMLHttpRequest();
 request.open('GET', '/todo/api/list', true);
 
 let requestErrorFunc = function() {
-  alert( "ERROR: failed to load todoList" );
+  window.alert( "ERROR: failed to load todoList" );
 };
 
 request.onload = function (data)
