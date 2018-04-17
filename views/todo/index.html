@@ -8,12 +8,14 @@
 </head>
 
 <body>
+<form action="api/create" method="post">
   <h1>Stuff I need to do:</h1>
   <ol id="todoList">
     <!-- The list of stuff I need to do -->
   </ol>
   Add a new todo:
-  <input type="text" id="newTodoInput"></input>
-  <button type="button" id="addTodoButton">Add</button>
+  <input type="text" id="todo" name="todo"></input>
+  <button type="submit" id="addTodoButton">Add</button>
+</form>
 </body>
 </html>

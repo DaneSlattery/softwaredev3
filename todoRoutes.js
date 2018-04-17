@@ -21,11 +21,11 @@ router.post('/edit', function(req, res){
 
 //RESTful api
 router.get('/api/list', function (req, res) {
-  res.json(todoList); //Respond with JSON
+  res.json(todoList.getList()); //Respond with JSON
 });
 
 router.get('/api/get/:id', function (req, res) {
-   res.json(todoList[req.params.id]); //Notice the wildcard in the URL?
+   res.json(todoList.get(req.params.id)); //Notice the wildcard in the URL?
                 //Try browsing to /api/get/0 once you've added some entries
 });
 
@@ -35,8 +35,8 @@ router.get('/api/get/:id', function (req, res) {
 
 router.post('/api/create', function(req, res){
   console.log('Creating the following todo:', req.body.todo);
-  todoList.push(req.body.todo);
-  res.redirect(req.baseUrl + '/api/list');
+  todoList.add(req.body.todo);
+  res.redirect(req.baseUrl + '/');
 });
 
 router.post('/api/delete', function(req, res){

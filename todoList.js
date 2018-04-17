@@ -27,5 +27,9 @@ module.exports =
     test: function()
     {
         return true;
+    },
+    getList: function()
+    {
+        return list;
     }
 }
