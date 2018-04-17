@@ -3,19 +3,20 @@
 <head>
 <title>Todo List</title>
 <meta charset="utf-8" />
+<link rel="stylesheet" href="/cdn/css/main.css">
 <script src="/cdn/libraries/jquery.js"></script><!-- the jQuery library-->
 <script src="/cdn/scripts/todo/index.js"></script><!-- Our JavaScript code for this page-->
 </head>
 
 <body>
-<form action="api/create" method="post">
-  <h1>Stuff I need to do:</h1>
-  <ol id="todoList">
-    <!-- The list of stuff I need to do -->
-  </ol>
-  Add a new todo:
-  <input type="text" id="todo" name="todo"></input>
-  <button type="submit" id="addTodoButton">Add</button>
-</form>
+  <form action="api/create" method="post">
+    <h1>Stuff I need to do:</h1>
+    <ol id="todoList">
+      <!-- The list of stuff I need to do -->
+    </ol>
+    Add a new todo:
+    <input type="text" id="todo" name="todo"></input>
+    <button type="submit" id="addTodoButton">Add</button>
+  </form>
 </body>
 </html>

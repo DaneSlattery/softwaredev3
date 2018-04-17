@@ -10,7 +10,6 @@ request.onload = function (data)
 {
   if (request.status >= 200 && request.status < 400)
   {
-    console.log('sdfdfd');
     let data = JSON.parse(request.responseText);
     let todoList = document.getElementById('todoList');
     // Iterate through all todo items
