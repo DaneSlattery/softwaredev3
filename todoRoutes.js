@@ -36,7 +36,7 @@ router.get('/api/get/:id', function (req, res) {
 router.post('/api/create', function(req, res){
   console.log('Creating the following todo:', req.body.todo);
   todoList.add(req.body.todo);
-  // res.redirect(req.baseUrl + '/');
+  res.redirect(req.baseUrl + '/');
 });
 
 router.post('/api/delete', function(req, res){
